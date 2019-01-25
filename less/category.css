@@ -1,0 +1,205 @@
+html {
+  font-size: 26.6667vw;
+}
+.bb {
+  border-bottom: 1px solid #666;
+}
+.bt {
+  border-top: 1px solid #666;
+}
+.bl {
+  border-left: 1px solid #666;
+}
+.br {
+  border-right: 1px solid #666;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-size: 14px;
+  font-family: "微软雅黑";
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  vertical-align: middle;
+}
+input {
+  border: 0;
+  outline: 0;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* 如果元素和屏幕一样宽  或者 一样 高可以使用vw单位 */
+  width: 100vw;
+  display: flex;
+  z-index: 999;
+  height: .45rem;
+  background-color: #ccc;
+}
+#header [class^="icon-"] {
+  background-image: url(../images/sprites.png);
+  /* 注意按照背景图的原图宽高 除以2来写  原图是400*400 设置为 200 * 200 */
+  background-size: 2rem 2rem;
+  /* 调整背景图定位原点 参照盒模型的哪个区域 */
+  background-origin: content-box;
+  /* 设置背景图的裁切 裁切掉处了 内容区域以外的背景图 */
+  background-clip: content-box;
+}
+#header .icon-logo {
+  display: block;
+  width: 0.8rem;
+  height: 0.45rem;
+  padding: 0.1rem 0.11rem;
+  /* 背景图的定位也是要 除以2来写 0  216px 变成 -108px */
+  background-position: 0 -1.08rem;
+}
+#header .icon-back {
+  width: .4rem;
+  height: .45rem;
+  padding: .125rem .1rem;
+  background-position: -0.2rem 0;
+}
+#header .icon-menu {
+  width: .4rem;
+  height: .45rem;
+  padding: .125rem .1rem;
+  background-position: -0.6rem 0;
+}
+#header form {
+  flex: 1;
+  padding-top: 0.05rem;
+  position: relative;
+}
+#header form .icon-search {
+  position: absolute;
+  left: 0.07rem;
+  top: 0.12rem;
+  width: 0.2rem;
+  height: 0.2rem;
+  background-image: url(../images/sprites.png);
+  background-size: 2rem 2rem;
+  background-position: -0.58rem -1.08rem;
+}
+#header form input {
+  width: 100%;
+  height: 0.35rem;
+  border-radius: 0.175rem;
+  padding-left: 0.3rem;
+  font-size: 0.14rem;
+}
+#header .login {
+  width: 0.5rem;
+  height: 0.45rem;
+  line-height: 0.45rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.14rem;
+}
+html,
+body {
+  height: 100%;
+}
+#main {
+  width: 100%;
+  height: 100%;
+  padding: 0.45rem 0 0.5rem 0;
+  display: flex;
+}
+#main > .left {
+  width: 1rem;
+  height: 100%;
+}
+#main > .left .swiper-container {
+  height: 100%;
+  overflow: hidden;
+}
+#main > .left .swiper-container .swiper-wrapper {
+  height: 100%;
+}
+#main > .left .swiper-container .swiper-wrapper .swiper-slide {
+  height: auto;
+}
+#main > .left .swiper-container .swiper-wrapper .swiper-slide li {
+  height: 0.5rem;
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+  line-height: 0.5rem;
+  text-align: center;
+}
+#main > .left .swiper-container .swiper-wrapper .swiper-slide li a {
+  font-size: 0.14rem;
+}
+#main > .left .swiper-container .swiper-wrapper .swiper-slide li.active {
+  background-color: #fff;
+}
+#main > .left .swiper-container .swiper-wrapper .swiper-slide li.active a {
+  color: red;
+  font-size: 0.14rem;
+}
+#main > .right {
+  flex: 1;
+  padding: 0.1rem;
+  overflow: hidden;
+  height: 100%;
+}
+#main > .right .swiper-container {
+  width: 100%;
+}
+#main > .right .swiper-container .swiper-slide {
+  width: 100%;
+}
+#main > .right .swiper-container .swiper-slide .topImg img {
+  width: 100%;
+  display: block;
+}
+#main > .right .swiper-container .swiper-slide .cateBox h3 {
+  line-height: 0.5rem;
+  display: block;
+  font-size: 0.16rem;
+}
+#main > .right .swiper-container .swiper-slide .cateBox ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#main > .right .swiper-container .swiper-slide .cateBox ul li {
+  width: 33.33%;
+}
+#main > .right .swiper-container .swiper-slide .cateBox ul li img {
+  width: 100%;
+  display: block;
+}
+#main > .right .swiper-container .swiper-slide .cateBox ul li p {
+  font-size: 0.14rem;
+  text-align: center;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #d51433;
+  z-index: 999;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  width: 25%;
+}
+#footer ul li a {
+  display: block;
+}
+#footer ul li a img {
+  width: 0.65rem;
+}

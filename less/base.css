@@ -1,0 +1,39 @@
+html {
+  font-size: 26.6667vw;
+}
+.bb {
+  border-bottom: 1px solid #666;
+}
+.bt {
+  border-top: 1px solid #666;
+}
+.bl {
+  border-left: 1px solid #666;
+}
+.br {
+  border-right: 1px solid #666;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-size: 14px;
+  font-family: "微软雅黑";
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  vertical-align: middle;
+}
+input {
+  border: 0;
+  outline: 0;
+}

@@ -1,0 +1,251 @@
+@import 'base.less';
+
+.icon{
+
+    background-image: url("../images/sprites.png");
+
+    background-size: 2rem 2rem;
+
+    background-clip: content-box;
+    
+    background-origin: content-box;
+}
+
+
+#header{
+    position: fixed;
+    display: flex;
+    // background-color: #ccc;
+    width: 100%;
+    z-index: 99999999;
+   
+    .icon_logo{
+        width: 0.8rem;
+        height: 0.45rem;
+        background-position: 0px -1.1rem;
+        padding: 0.1rem;
+        .icon;
+
+    }
+
+    >form{
+        flex: 1;
+        padding-top:0.05rem;
+        position: relative;
+
+        .icon_search{
+            .icon;
+            width: 0.2rem;
+            height: 0.2rem;
+            background-position: -0.6rem -1.1rem;
+            position: absolute;
+            left: 0.1rem;
+            top: 0.14rem;
+        }
+
+        input{
+            width: 100%;
+            height: 0.35rem;
+            border-radius: 17px;
+            padding-left: 0.3rem;
+        }
+    }
+
+    .login{
+        color: #fff;
+        width: 0.5rem;
+        text-align: center;
+        line-height: 0.45rem;
+    }
+}
+
+// 轮播图
+.swiper-container{
+    // width: 100%;
+    // a
+    img{
+        width: 100%;
+    }
+}
+
+// 内容导航
+#nav{
+    padding: 0.1rem 0px;
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+      
+        li{
+            width: 25%;
+            a{
+                display: block;
+                text-align: center;
+                img{
+                    width: 0.4rem;
+                    height: 0.4rem;
+                    p{
+                        margin:0.05rem 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 主内容
+#main{
+    padding: 0.1rem;
+    background-color: #eee;
+    padding-bottom: 0.6rem;
+
+    //京东秒杀
+    .seckill{
+        background-color: #fff;
+        box-shadow: 0px 0px 0.02rem 0.01rem hotpink;
+        // 掌上秒杀
+        .title{
+             display: flex;
+             justify-content: space-between;
+             line-height: 0.3rem;
+             .left{
+                 display: flex;
+                 .seckill_icon{
+                     width: 0.2rem;
+                     height: 0.25rem;
+                     display: inline-block;
+                     margin-left: 0.05rem;
+                 }
+                .seckill_name{
+                    color: @main-color;
+                    margin-left: 0.05rem;
+                }
+                .seckill_downtime{
+                    margin-left: 0.05rem;
+                    span:not(:nth-child(3n)){
+                    background-color: #000;
+                    width: 0.15rem;
+                    color:#fff;
+                   
+                    display: inline-block;
+                    text-align: center;
+                    line-height: 0.15rem;
+                    }
+            }
+            }
+            .right{  .more{
+                    margin-right: 0.1rem;
+                }
+            }
+       }
+
+       //三张电脑图
+        .content{
+            ul{
+           display: flex;
+           
+           li{
+               width: 33.3%;
+           
+               a{
+                   display: inline-block;
+                   text-align: center;
+               
+
+                   img{
+                       width: 1.1rem;
+                   }
+
+                   span{
+                       display: block;
+                       font-size: 0.12rem;
+                       color:@main-color;
+                   }
+                
+                   del{
+                    display: block;
+                    font-size: 0.12rem;
+                    color:#ccc;
+                   }
+                }  
+                   &~li{
+                       border-left: 1px solid #ccc;
+                   }   
+           }
+        }
+     }
+  } 
+
+  .jd_market{
+      margin-top: 0.1rem;
+      background-color: #fff;
+     box-shadow: 0px 0px 0.02rem 0.01rem hotpink;
+      .title{
+          line-height: 0.3rem;
+          h4{
+              font-weight: normal;
+              position: relative;
+              padding-left: 0.3rem;
+              &::before{
+                content: " ";
+                background-color: @main-color;
+                width: 0.04rem;
+                height: 0.16rem;
+                position: absolute;
+                left: 0.2rem;
+                top: 0.07rem;;
+            }
+          }
+      }
+      .content{
+          display: flex;
+
+          .market_left{
+              width: 50%;
+              a{
+                  display: block;
+                  
+                  img{
+                      width: 100%;
+                  }
+              }
+          }
+          .market_right{
+            width: 50%;
+            a{
+                display: block;
+                img{
+                    width: 100%;
+                }
+            
+            }
+          }
+
+      }
+  }
+
+
+
+}
+
+
+//脚部
+
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(213, 20, 51);
+    ul{
+        display: flex;
+        li{
+            width: 25%;
+            a{
+                display: block;
+                img{
+                    width: 0.65rem;
+                }
+            }
+        }
+    }
+
+}

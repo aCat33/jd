@@ -1,0 +1,187 @@
+@import 'base.less';
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* 如果元素和屏幕一样宽  或者 一样 高可以使用vw单位 */
+    width: 100vw;
+    display: flex;
+    z-index: 999;
+    height: .45rem;
+    background-color: #ccc;
+    [class^="icon-"] {
+        background-image: url(../images/sprites.png);
+        /* 注意按照背景图的原图宽高 除以2来写  原图是400*400 设置为 200 * 200 */
+        background-size: 2rem 2rem;
+        /* 调整背景图定位原点 参照盒模型的哪个区域 */
+        background-origin: content-box;
+        /* 设置背景图的裁切 裁切掉处了 内容区域以外的背景图 */
+        background-clip: content-box;
+    }
+    .icon-logo {
+        display: block; // 1rem == 100px 在之前px的基础上 / 100即可
+        width: 0.8rem;
+        height: 0.45rem;
+        padding: 0.1rem 0.11rem;
+        /* 背景图的定位也是要 除以2来写 0  216px 变成 -108px */
+        background-position: 0 -1.08rem;
+    }
+    .icon-back {
+        width: .4rem;
+        height: .45rem;
+        padding: .125rem .1rem;
+        background-position: -0.2rem 0;
+    }
+    .icon-menu {
+        width: .4rem;
+        height: .45rem;
+        padding: .125rem .1rem;
+        background-position: -0.6rem 0;
+    }
+    form {
+        flex: 1;
+        padding-top: 0.05rem;
+        position: relative;
+        .icon-search {
+            position: absolute;
+            left: 0.07rem;
+            top: 0.12rem;
+            width: 0.2rem;
+            height: 0.2rem;
+            background-image: url(../images/sprites.png);
+            background-size: 2rem 2rem;
+            background-position: -0.58rem -1.08rem;
+        }
+        input {
+            width: 100%;
+            height: 0.35rem;
+            border-radius: 0.175rem;
+            padding-left: 0.3rem;
+            font-size: 0.14rem;
+        }
+    }
+    .login {
+        width: 0.5rem;
+        height: 0.45rem;
+        line-height: 0.45rem;
+        text-align: center;
+        color: #fff;
+        font-size: 0.14rem;
+    }
+}
+
+html,body{
+    height: 100%;
+}
+#main{
+    width: 100%;
+    height: 100%;
+    padding: 0.45rem 0 0.5rem 0;
+    display: flex;
+  
+    >.left{
+       
+        width: 1rem;
+        height: 100%;
+        
+        .swiper-container{
+            height: 100%;
+            overflow: hidden;
+            .swiper-wrapper{
+                height:100%;
+                .swiper-slide {
+                    height: auto;
+                   
+                    }
+                
+                .swiper-slide li{
+                    height: 0.5rem;
+                    background-color: #eee;
+                    border-bottom: 1px solid #ccc;
+                    line-height: 0.5rem;
+                    text-align: center;   
+                    a{
+                        font-size: 0.14rem;
+                    }   
+                    &.active{
+                        background-color: #fff;
+                        a{
+                            color:red;
+                            font-size: 0.14rem;
+                        }
+
+                    }   
+                         
+                }
+            }
+        }
+    
+    }
+    >.right{
+        flex: 1;  
+        padding: 0.1rem;
+        overflow: hidden;
+        height: 100%;
+        .swiper-container{
+            width: 100%;
+            .swiper-slide{
+                width: 100%;
+                .topImg{
+                    img{
+                        width: 100%;
+                        display: block;
+                    }
+                }
+                .cateBox{
+                   
+
+                    h3{
+                        
+                        line-height: 0.5rem; 
+                        display: block;
+                        font-size: 0.16rem;
+                    }
+                    ul{
+                        display: flex;
+                        flex-wrap: wrap;
+                        li{
+                            width: 33.33%;
+                            img{
+                                width: 100%;
+                                display: block;
+                            }
+                            p{
+                                font-size: 0.14rem;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(213, 20, 51);
+    z-index: 999;
+    ul{
+        display: flex;
+        li{
+            width: 25%;
+            a{
+                display: block;
+                img{
+                    width: 0.65rem;
+                }
+            }
+        }
+    }
+
+}
